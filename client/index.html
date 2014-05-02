@@ -9,6 +9,17 @@
 	<script src="irbot.js"></script>
 </head>
 <body onload="IRBOT.main()">
-	Hello, world!
+	<div id="log"></div><br>
+	<input type="text" name="input" autofocus onkeydown="if (event.keyCode == 13) { IRBOT.send(this.value); this.value=''; return false; }"></input>
+	<!--form id="clientForm" name="clientForm">
+		<textarea readonly name="console" rows="20" cols="80" id="console" class="minSize fadeOut"
+				onfocus="GAME.gui.setChatFocus(true, this);"
+				onblur="GAME.gui.setChatFocus(false, this);">## Console ready. ##&#13;&#10;</textarea><br>
+		<textarea type="text" name="input" rows="1" cols="80" id="input"
+				placeholder="(Press Enter to Chat)"
+				onfocus="GAME.gui.setChatFocus(true, this);"
+				onblur="GAME.gui.setChatFocus(false, this);"
+				onkeydown="if (event.keyCode == 13) { GAME.gui.submitConsoleInput(this.form); return false; }"></textarea>
+	</form-->
 </body>
 </html>

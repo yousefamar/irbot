@@ -11,6 +11,9 @@ window.IRBOT.main = do
       window.close!
 
   ->
-    shoe '/irbot' .pipe through (data) ->
-      data = JSON.parse data
-      handlers[data.event]? data
+    stream = shoe '/irbot'
+    stream.pipe through (msg) ->
+      msg = JSON.parse msg
+      handlers[msg.event]? msg
+    delete window.IRBOT.main
+    window.IRBOT.send = -> stream.write it

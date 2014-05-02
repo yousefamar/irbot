@@ -7,9 +7,15 @@ window.IRBOT.main = (shoe = require('shoe'), through = require('through'), handl
     return window.close();
   }
 }, function(){
-  return shoe('/irbot').pipe(through(function(data){
+  var stream;
+  stream = shoe('/irbot');
+  stream.pipe(through(function(msg){
     var key$;
-    data = JSON.parse(data);
-    return typeof handlers[key$ = data.event] === 'function' ? handlers[key$](data) : void 8;
+    msg = JSON.parse(msg);
+    return typeof handlers[key$ = msg.event] === 'function' ? handlers[key$](msg) : void 8;
   }));
+  delete window.IRBOT.main;
+  return window.IRBOT.send = function(it){
+    return stream.write(it);
+  };
 });
