@@ -3,7 +3,8 @@ var shoe, through, handlers;
 window.IRBOT = {};
 window.IRBOT.main = (shoe = require('shoe'), through = require('through'), handlers = {
   serverDc: function(){
-    return console.log("Server DC'd");
+    console.log("Server DC'd");
+    return window.close();
   }
 }, function(){
   return shoe('/irbot').pipe(through(function(data){

@@ -8,6 +8,7 @@ window.IRBOT.main = do
   handlers =
     server-dc: ->
       console.log "Server DC'd"
+      window.close!
 
   ->
     shoe '/irbot' .pipe through (data) ->
