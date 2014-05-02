@@ -23,7 +23,8 @@
 		"LiveScript": "*",
 		"ecstatic": "*",
 		"shoe": "*",
-		"open": "*"
+		"open": "*",
+		"irc": "*"
 	},
 	"license": "MIT"
 }

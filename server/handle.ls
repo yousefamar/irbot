@@ -1,3 +1,5 @@
+require! <[ ./irc.ls ]>
+
 log = console.log
 
 handle = ->
