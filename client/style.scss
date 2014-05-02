@@ -1,3 +1,10 @@
+$bgDark: #153450;
+$bgLight: #294052;
+$mgDark: #447294;
+$mgLight: #8FBCDB;
+$fgDark: #F4D6BC;
+$fgLight: #F8E4CC;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -9,8 +16,14 @@
 		outline: none;
 	}
 }
+body {
+	background-color: $bgDark;
+}
 input {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	background-color: $bgLight;
+	color: $fgLight;
+	border: 1px solid $mgDark;
 }

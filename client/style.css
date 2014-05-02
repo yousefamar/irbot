@@ -7,7 +7,13 @@
   *:focus {
     outline: none; }
 
+body {
+  background-color: #153450; }
+
 input {
   position: absolute;
   bottom: 0;
-  width: 100%; }
+  width: 100%;
+  background-color: #294052;
+  color: #f8e4cc;
+  border: 1px solid #447294; }
