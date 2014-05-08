@@ -27,7 +27,6 @@ window.IRBOT.main = (shoe = require('shoe'), through = require('through'), handl
   }));
   delete window.IRBOT.main;
   return window.IRBOT.send = function(it){
-    stream.write(it);
-    return console.log("sending");
+    return stream.write(it);
   };
 });

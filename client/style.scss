@@ -1,9 +1,9 @@
-$bgDark: #153450;
-$bgLight: #294052;
-$mgDark: #447294;
-$mgLight: #8FBCDB;
-$fgDark: #F4D6BC;
-$fgLight: #F8E4CC;
+$bgDark: #030C22;
+$bgLight: #20293F;
+$mg1: #3E3E53;
+$mg2: #404749;
+$fgDark: #A9B0B3;
+$fgLight: #E5E7E8;
 
 * {
 	margin: 0;
@@ -16,14 +16,64 @@ $fgLight: #F8E4CC;
 		outline: none;
 	}
 }
+html, body {
+	width: 100%;
+	height: 100%;
+}
 body {
 	background-color: $bgDark;
 }
-input {
+#console {
+	width: 90%;
+	height: 100%;
+	#input-wrapper {
+		position: absolute;
+		bottom: 0;
+		width: inherit;
+		height: 20px;
+		input {
+			width: 100%;
+			height: 100%;
+			padding: 0 3px 0 3px;
+			background-color: $bgLight;
+			color: $fgLight;
+			border: 1px solid $mg1;
+			border-right: 0;
+		}
+	}
+	#logs {
+		position: absolute;
+		width: inherit;
+		height: calc(100% - 20px);
+		bottom: 20px;
+		.log {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			overflow: auto;
+			width: 100%;
+			height: 100%;
+			padding: 0 4px 0 4px;
+			display: none;
+			color: $fgLight;
+			&:target {
+				display: inline;
+			}
+		}
+	}
+}
+#sidebar {
 	position: absolute;
-	bottom: 0;
-	width: 100%;
-	background-color: $bgLight;
-	color: $fgLight;
-	border: 1px solid $mgDark;
+	top: 0;
+	right: 0;
+	width: 10%;
+	height: 100%;
+	border-left: 1px solid $mg1;
+	#rooms {
+		width: 100%;
+		height: 50%;
+		padding: 0 4px 0 4px;
+		color: $fgDark;
+		border-bottom: 1px solid $bgLight;
+	}
 }

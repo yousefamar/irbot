@@ -9,19 +9,149 @@
 	<script src="irbot.js"></script>
 </head>
 <body onload="IRBOT.main()">
-	<div id="rooms">
-		<div class="room" onclick="IRBOT.join('lobby');">Lobby</div>
-	</div><br>
-	<input type="text" name="input" autofocus onkeydown="if (event.keyCode == 13) { IRBOT.send(this.value); this.value=''; return false; }"></input>
-	<!--form id="clientForm" name="clientForm">
-		<textarea readonly name="console" rows="20" cols="80" id="console" class="minSize fadeOut"
-				onfocus="GAME.gui.setChatFocus(true, this);"
-				onblur="GAME.gui.setChatFocus(false, this);">## Console ready. ##&#13;&#10;</textarea><br>
-		<textarea type="text" name="input" rows="1" cols="80" id="input"
-				placeholder="(Press Enter to Chat)"
-				onfocus="GAME.gui.setChatFocus(true, this);"
-				onblur="GAME.gui.setChatFocus(false, this);"
-				onkeydown="if (event.keyCode == 13) { GAME.gui.submitConsoleInput(this.form); return false; }"></textarea>
-	</form-->
+	<div id="console">
+		<div id="logs">
+			<div class="log" id="room1">
+				<p>SUP</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>SUP</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+				<p>HI</p>
+			</div>
+			<div class="log" id="room2">
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+				<p>HO</p>
+			</div>
+			<div class="log" id="room3">Room 3</div>
+			<div class="log" id="room4">Room 4</div>
+			<div class="log" id="room5">Room 5</div>
+			<div class="log" id="room6">Room 6</div>
+		</div>
+		<div id="input-wrapper"><input type="text" name="input" autofocus onkeydown="if (event.keyCode == 13) { IRBOT.send(this.value); this.value=''; return false; }"></input></div>
+		<!--form id="clientForm" name="clientForm">
+			<textarea readonly name="console" rows="20" cols="80" id="console" class="minSize fadeOut"
+					onfocus="GAME.gui.setChatFocus(true, this);"
+					onblur="GAME.gui.setChatFocus(false, this);">## Console ready. ##&#13;&#10;</textarea><br>
+			<textarea type="text" name="input" rows="1" cols="80" id="input"
+					placeholder="(Press Enter to Chat)"
+					onfocus="GAME.gui.setChatFocus(true, this);"
+					onblur="GAME.gui.setChatFocus(false, this);"
+					onkeydown="if (event.keyCode == 13) { GAME.gui.submitConsoleInput(this.form); return false; }"></textarea>
+		</form-->
+	</div>
+	<div id="sidebar">
+		<div id="rooms">
+			<!--div class="room" onclick="IRBOT.join('lobby');">Lobby</div-->
+			<div class="room" onclick="window.location='#room1';">Room 1</div>
+			<div class="room" onclick="window.location='#room2';">Room 2</div>
+			<div class="room" onclick="window.location='#room3';">Room 3</div>
+			<div class="room" onclick="window.location='#room4';">Room 4</div>
+			<div class="room" onclick="window.location='#room5';">Room 5</div>
+			<div class="room" onclick="window.location='#room6';">Room 6</div>
+		</div>
+	</div>
 </body>
 </html>
