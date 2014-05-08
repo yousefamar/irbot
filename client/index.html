@@ -9,7 +9,9 @@
 	<script src="irbot.js"></script>
 </head>
 <body onload="IRBOT.main()">
-	<div id="log"></div><br>
+	<div id="rooms">
+		<div class="room" onclick="IRBOT.join('lobby');">Lobby</div>
+	</div><br>
 	<input type="text" name="input" autofocus onkeydown="if (event.keyCode == 13) { IRBOT.send(this.value); this.value=''; return false; }"></input>
 	<!--form id="clientForm" name="clientForm">
 		<textarea readonly name="console" rows="20" cols="80" id="console" class="minSize fadeOut"

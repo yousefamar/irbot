@@ -17,7 +17,9 @@ if '--gui' in process.argv
   sock = shoe (stream) ->
     streams.push(stream)
     log "stream created"
-    stream.on \data, !-> handle it
+    stream.on \data, !->
+      reply <-! handle it
+      reply? && stream.write JSON.stringify {event: \log, text: reply}
     stream.on \end, !-> delete streams[streams.indexOf(stream)]
   sock.install server, \/irbot
 
